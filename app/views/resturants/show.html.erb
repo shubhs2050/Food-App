@@ -1,0 +1,39 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+         Restaurant------>    <%= @resturant.name %><br><br>
+
+        </h1>
+         <div class="ry"><%= image_tag @resturant.image.url %></div>
+       </div>
+    </section>
+  </aside>
+<div class="row">
+  <% if @resturant.products.any? %>
+    <h3>Products Available (<%= @resturant.products.count %>)</h3>
+    <ol class="microposts">
+      <%= render @products %>
+    </ol>
+    <% else %>
+    <h3> Currently there are no products in this Restaurant </h3>
+  <% end %>
+</div>
+<br/>
+
+
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+
+<div>
+<h3 class="text-center">List of All Resturants: </h3><br />
+<hr />
+<% if !@resturants.blank? %>
+
+<% for item in @resturants %>
+<%= item.name %> (<%= item.owner_name %>)<br>
+<%= image_tag(item.image.url) %><br><br><br>
+<% end %>
+<% else %>
+<% end %>
+</div>

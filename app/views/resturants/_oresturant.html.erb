@@ -1,0 +1,7 @@
+<li id="resturant-<%= resturant.owner_id %>">
+  <span class="owner"><%= resturant.name %></span>
+  <span class="timestamp">
+    Added <%= time_ago_in_words(resturant.created_at) %> ago.
+  </span>
+</li>
+<div class="try"> <%= image_tag resturant.image.url %></div>

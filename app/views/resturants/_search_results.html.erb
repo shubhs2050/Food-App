@@ -1,0 +1,6 @@
+<ul>
+    <% @resturants.each do |grant| %>
+  <li><%= link_to resturants.name,
+    :action => 'show', :id => grant.id  %></li>
+  <% end %>
+  </ul>

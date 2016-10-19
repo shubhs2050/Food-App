@@ -1,0 +1,13 @@
+<h3 class="text-center">List of All Orders Made: </h3><br />
+<hr />
+<% if !@confirms.blank? %>
+
+<% for item in @confirms.order("id DESC") %>
+Order was Made by : <%= item.name %><br>
+Address : (<%= item.address %>)<br>
+Contact : (<%= item.phone %>)<br>
+Order was made at : <%= item.created_at %><br><br><br>
+<% end %>
+<% else %>
+<% end %>
+</div>

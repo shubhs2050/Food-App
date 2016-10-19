@@ -1,0 +1,12 @@
+  <ul>
+    <h2>Dashboard</h2>
+
+      <h1 class="text-center">You are the Super Admin</h1>
+      <% if current_user.admin? %>
+       <h1 class="text-center"><%= link_to "Add Owner to App", own_path %></h1>
+       <h1 class="text-center"><%= link_to "Assign a restaurant to any Owner", rast_path %></h1>
+       <h1 class="text-center"><%= link_to "Add Product to any Restaurant", pods_path %></h1>
+       <h1 class="text-center"><%= link_to "View all owner", vown_path %></h1>
+       <h1 class="text-center"><%= link_to "View all the orders made", detail_path %></h1>
+      <% end %>
+  </ul>

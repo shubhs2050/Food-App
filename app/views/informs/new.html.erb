@@ -1,0 +1,26 @@
+<h1>Enter Your Details</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for (@inform) do |f| %>
+    <%= render 'shared/info_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :resturant_name %>
+      <%= f.text_field :resturant_name, class: 'form-control' %>
+
+      <%= f.label :place %>
+      <%= f.text_field :place, class: 'form-control' %>
+
+      <%= f.label :mobile %>
+      <%= f.text_field :mobile, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+
+      <%= f.submit "Send", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

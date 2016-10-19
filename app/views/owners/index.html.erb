@@ -1,0 +1,6 @@
+<h1>Owners Available </h1>
+<% @owners.each do |article| %>
+  <div class="article">
+    <h1 class="article-title"><%= link_to article.name, article %></h1>
+  </div>
+<% end %>

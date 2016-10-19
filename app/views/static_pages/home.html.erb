@@ -1,0 +1,84 @@
+<div class="center jumbotron">
+  <h1>Welcome to the Food App</h1>
+  <% unless current_user?(@user)%>
+    <h2>
+      This is the place for you to get your favourite dishes
+    </h2>
+    <% else %>
+   <p class="btn-group">
+    <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-success" %>
+    <%= link_to "Login!!!", login_path, class: "btn btn-lg btn-default" %>
+  <% end %>
+</p>
+<%= form_tag(resturants_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+     <div class="input-append">
+       <%= text_field_tag :search, params[:search], class: "span2", placeholder: "Search Resturants" %>
+       <button class="btn btn-lg btn-warning" type="submit"><i class="icon-search"></i>Search</button>
+     </div>
+   <% end %>
+
+  </div>
+
+
+ <!--feture content-->
+      <div class="row">
+
+        <div class="col-sm-4 fbox">
+
+        <span class="glyphicon glyphicon-heart"></span>
+        <h3>Easy to Use</h3>
+          <p>Knowing whether the settings and controls should be placed within the application itself or the Settings application is important because this can help optimizing application’s human </p>
+          <a  href="#" class="btn btn-info">Read more..</a>
+        </div>
+
+        <div class="col-sm-4 fbox">
+        <span class="glyphicon glyphicon-comment"></span>
+          <h3>Connect with Us</h3>
+          <p>We all know that friendship is a good thing. But did you know that friends have a huge impact on your happiness and quality of life? Good friends relieve stress, provide comfort</p>
+          <a  href="#" class="btn btn-info">Read more..</a>
+        </div>
+
+        <div class="col-sm-4 fbox">
+        <span class="glyphicon glyphicon-eye-open"></span>
+          <h3>Real Food</h3>
+          <p>Hyderabadi Cuisine has different recipes for different events, and hence is categorized accordingly, like banquet food, for weddings and parties, festival foods and travel foods. </p>
+          <a  href="#" class="btn btn-info">Read more..</a>
+        </div>
+
+      </div> <!--end feture -->
+ <hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+           <%=image_tag("td.jpg", alt: "Example Image",:size => "360x280")%>
+        </div>
+        <div class="col-md-8">
+           <%=image_tag("tr.jpg", alt: "Example Image",:size => "730x280")%>
+        </div>
+    </div>
+</div>
+ <hr>
+      <!--how to content-->
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>How to used it</h3>
+           <p>The word "its" is used to describe something that is connected to an animal or an inanimate object. It's easy to get confused because some people think of it's as the possessive form which is not true. </p>
+           <div class="row">
+             <div class="col-sm-6">
+            <%=image_tag("bt.jpg", alt: "Example Image")%>
+
+
+             </div>
+             <div class="col-sm-6">
+             <p>It is, however true when talking about names as in "Jeanna's dog bit me." Be careful not to get the two mixed up.</p>
+             <a  href="https://play.google.com/store?hl=en" class="btn btn-warning ">Download App </a>
+
+             </div>
+           </div>
+        </div>
+        <div class="col-sm-6">
+          <h3>About us</h3>
+          <p>Since our humble beginnings as an Fooding-Team run eatery in Hyderabad, we have been able to maintain our individuality and creativity, while growing into a unique healthy Hyderabadi fast food chain.</p>
+          <%= link_to "Know more About us", help_path, class: "btn btn-danger" %>
+        </div>
+      </div>

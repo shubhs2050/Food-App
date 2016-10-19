@@ -1,0 +1,10 @@
+<li id="resturant-<%= resturant.id %>">
+  <span class="user"><%= link_to resturant.name, @resturant %></span>
+  <% if current_user.try(:admin?) && !current_user?(resturant) %>
+    | <%= link_to "delete", resturant, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+  <span class="timestamp">
+    Added <%= time_ago_in_words(resturant.created_at) %> ago.
+  </span>
+</li>
