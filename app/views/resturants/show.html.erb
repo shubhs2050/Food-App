@@ -2,10 +2,9 @@
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-         Restaurant------>    <%= @resturant.name %><br><br>
-
+        <%= @resturant.name %><br><br>
         </h1>
-         <div class="ry"><%= image_tag @resturant.image.url %></div>
+         <div style= "filter: brightness(50%);width: 320%;height: 200px;border: 2px solid red;background-attachment: fixed; background-image: url(<%= @resturant.image.url %>)"></div>
        </div>
     </section>
   </aside>
@@ -20,7 +19,7 @@
   <% end %>
 </div>
 <br/>
-
+<!-- 
 
 <br/><br/><br/><br/>
 <br/><br/><br/><br/>
@@ -37,3 +36,4 @@
 <% else %>
 <% end %>
 </div>
+ -->
