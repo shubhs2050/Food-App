@@ -16,11 +16,11 @@ $(document).ready(function(){
     }
   });
 
-  $('.slider').slider({
-    full_width: true,
-    height: 500,
-    //indicators: false
-  });
+  // $('.slider').slider({
+  //   full_width: true,
+  //   height: 500,
+  //   //indicators: false
+  // });
   $(".food_status").each(function() {
     if ($(this).data("status") === "available") {
       $(this).prop("checked", true);
@@ -29,7 +29,7 @@ $(document).ready(function(){
     }
   });
 
-  $(".parallax").parallax();
+ // $(".parallax").parallax();
 
   $(".select_field").change(function() {
       var url = $(".select_field").val();

@@ -1,10 +1,18 @@
-<div class="row full-height">
- <div class="col s9 full-height scroll-bar">
-  <br><br>
-  <% @resturants.each do |article| %>
-    <div class="article">
-      <h1 class="article-title"><%= link_to article.name, article %></h1>
-      <h1 class="ry"><%= link_to image_tag(article.image.url), article %></h1>
+<div class="container">
+  <div class="row">
+    <% @resturants.each do |resturant| %>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        	<a href="/resturants/<%= resturant.id %>">
+        	<%= image_tag(resturant.image.url, :style => "max-width: 273px;height: 246px; margin-top: 15px;") %>
+        	</a>
+          <div class="caption">
+            <p style= "margin-left: 35%;"><%= link_to resturant.name, resturant %></p>
+          </div>
+        
+      </div>
     </div>
-  <% end %>
-</div></div>
+    <% end %>
+	</div>
+</div>
+
